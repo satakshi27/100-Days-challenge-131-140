@@ -2,27 +2,27 @@ Q139:Show that enums store integers by printing assigned values.
 
 #include <stdio.h>
 
-// Enum with default integer values
-typedef enum {
-    ADMIN,   // 0
-    USER,    // 1
-    GUEST    // 2
-} DefaultRole;
+typedef enum 
+{
+    ADMIN,   
+    USER,    
+    GUEST    
+} 
+DefaultRole;
 
-// Enum with custom assigned values
-typedef enum {
+typedef enum 
+{
     SUPERADMIN = 10,
     MODERATOR = 20,
     VISITOR = 30
-} CustomRole;
+} 
+CustomRole;
 
-int main() {
-    // Print default enum values
+int main() 
+{
     printf("DefaultRole ADMIN = %d\n", ADMIN);
     printf("DefaultRole USER = %d\n", USER);
     printf("DefaultRole GUEST = %d\n\n", GUEST);
-
-    // Print custom enum values
     printf("CustomRole SUPERADMIN = %d\n", SUPERADMIN);
     printf("CustomRole MODERATOR = %d\n", MODERATOR);
     printf("CustomRole VISITOR = %d\n", VISITOR);
