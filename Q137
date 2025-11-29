@@ -1,0 +1,34 @@
+Q137:Create an enum for user roles (ADMIN, USER, GUEST) and display messages based on role.
+#include <stdio.h>
+
+// Define the enum for user roles
+typedef enum {
+    ADMIN,
+    USER,
+    GUEST
+} UserRole;
+
+// Function to display message based on role
+void displayMessage(UserRole role) {
+    switch (role) {
+        case ADMIN:
+            printf("Welcome Admin! You have full access.\n");
+            break;
+        case USER:
+            printf("Welcome User! You have limited access.\n");
+            break;
+        case GUEST:
+            printf("Welcome Guest! You have minimal access.\n");
+            break;
+        default:
+            printf("Unknown role!\n");
+            break;
+    }
+}
+
+int main() {
+    UserRole roles[] = {ADMIN, USER, GUEST};
+    int numRoles = sizeof(roles) / sizeof(roles[0]);
+
+    for (int i = 0; i < numRoles; i++) {
+
