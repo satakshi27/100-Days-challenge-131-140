@@ -1,0 +1,22 @@
+Q140:Define a struct with enum Gender and print person's gender.
+
+#include <stdio.h>
+
+// Define enum for Gender
+typedef enum {
+    MALE,
+    FEMALE,
+    OTHER
+} Gender;
+
+// Define a struct Person with name and gender
+typedef struct {
+    char name[50];
+    Gender gender;
+} Person;
+
+// Function to print gender as string
+const char* getGenderName(Gender g) {
+    switch (g) {
+        case MALE:   return "Male";
+        case FEMALE: return "Female";
