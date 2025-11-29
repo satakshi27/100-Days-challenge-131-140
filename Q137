@@ -2,14 +2,12 @@ Q137:Create an enum for user roles (ADMIN, USER, GUEST) and display messages bas
 
 #include <stdio.h>
 
-// Define the enum for user roles
 typedef enum {
     ADMIN,
     USER,
     GUEST
 } UserRole;
 
-// Function to display message based on role
 void displayMessage(UserRole role) {
     switch (role) {
         case ADMIN:
@@ -26,10 +24,14 @@ void displayMessage(UserRole role) {
             break;
     }
 }
-
-int main() {
-    UserRole roles[] = {ADMIN, USER, GUEST};
+{
+UserRole roles[] = {ADMIN, USER, GUEST};
     int numRoles = sizeof(roles) / sizeof(roles[0]);
 
     for (int i = 0; i < numRoles; i++) {
+        displayMessage(roles[i]);
+    }
+
+    return 0;
+}
 
